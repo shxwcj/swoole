@@ -1,34 +1,66 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+    <!--<meta charset="UTF-8">-->
+    <!--<title>Title</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--1111-->
+<!--</body>-->
+
+<!--<script>-->
+    <!--var ws = new WebSocket("ws://192.168.158.131:9505");-->
+
+    <!--//建立连接-->
+    <!--ws.open = function (data) {-->
+        <!--console.log(data);-->
+    <!--}-->
+
+    <!--//接收服务器反馈的信息-->
+    <!--ws.onmessage = function (data) {-->
+        <!--console.log(data);-->
+    <!--}-->
+
+    <!--//关闭连接-->
+    <!--ws.onclose = function () {-->
+        <!--console.log('关闭连接');-->
+    <!--}-->
+
+    <!--//报错时返回错误信息-->
+    <!--ws.onerror = function (e) {-->
+        <!--console.log(e);-->
+    <!--}-->
+<!--</script>-->
+<!--</html>-->
+
+
+  <!--IM-->
+
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
 </head>
 <body>
-1111
+    <!--发送信息-->
+    <div id="send_msg" class="main box-shadow" style="display: none">
+        <div id="msg"></div>
+        <div class="show_send">
+            <input type="text" id="text">
+            <input type="submit" class="send_button" value="发送数据" onclick="send_msg()">
+        </div>
+    </div>
+    <!--设置昵称-->
+    <div id="setName" class="box-shadow" style="display: block">
+        <input type="text" id="myname">
+        <input type="submit" id="setUserName" value="设置昵称" onclick="send_name()">
+    </div>
 </body>
-
-<script>
-    var ws = new WebSocket("ws://192.168.158.131:9505");
-
-    //建立连接
-    ws.open = function (data) {
-        console.log(data);
-    }
-
-    //接收服务器反馈的信息
-    ws.onmessage = function (data) {
-        console.log(data);
-    }
-
-    //关闭连接
-    ws.onclose = function () {
-        console.log('关闭连接');
-    }
-
-    //报错时返回错误信息
-    ws.onerror = function (e) {
-        console.log(e);
-    }
-</script>
+<script type="text/javascript" src="static/js/jquery-3.2.0.min.js"></script>
+<script type="text/javascript" src="static/js/webSocket.js"></script>
+<script type="text/javascript" src="static/js/index.js"></script>
 </html>
